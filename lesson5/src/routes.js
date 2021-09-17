@@ -1,9 +1,10 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
-import { Provider } from 'react-redux'
 import Chats from './chats';
 import { Home } from './home';
 import { Profile } from './profile';
+import { store } from './store';
 
 export const Routes = () => {
     return (
@@ -19,7 +20,7 @@ export const Routes = () => {
                 <Route path="/profile">
                     <Provider store={store}>
                         <Profile />
-                    </Provider>    
+                    </Provider>
                 </Route> 
                 <Route>
                     <h4>404</h4>
